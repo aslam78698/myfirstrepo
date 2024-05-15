@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Animation</title>
+    <style>
+        div{
+            height: 150px;
+            width: 150px;
+            background-color: aquamarine;
+            animation: divmotion;
+            animation-duration: 2s;
+            /* animation-iteration-count: infinite; */
+            
+        }
+
+        @keyframes divmotion {
+            0%{
+                background-color: aquamarine;
+                margin-top: 0;
+                margin-left: 0;
+            }
+            25%{
+                background-color: black;
+                margin-top: 0;
+                margin-left: 200px;
+            }
+            50%{
+                background-color: blueviolet;
+                margin-top: 200px;
+                margin-left: 200px; 
+            }
+            75%{
+                background-color: brown;
+                margin-top: 200px;
+                margin-left: 0;
+            }
+            100%{
+                background-color: aquamarine;
+                margin-top: 0;
+                margin-left: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+
+    </div>
+    
+</body>
+</html>
