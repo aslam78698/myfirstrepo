@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .mybtn{
+            background-color: cadetblue;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Gallery</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Products
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="product.html">Action</a></li>
+                  <li><a class="dropdown-item" href="product.html">Another action</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- navbar  -->
+
+
+
+    <!-- Comparison  -->
+
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-6">
+              <select id="p1" class="form-control text-center" onchange="prod1()">
+                <option selected disabled>------ Select ------</option>
+                <option>BMW</option>
+                <option>Ferrari</option>
+                <option>Audi</option>
+              </select>
+                <img src="images/no-image.png" class="mt-3" id="pimg1" height="400px" width="100%" alt="">
+                <div id="pdesc1">
+                  
+                </div>
+            </div>
+            <div class="col-md-6">
+              <select id="p2" class="form-control text-center" onchange="prod2()">
+                <option selected disabled>------ Select ------</option>
+                <option>BMW</option>
+                <option>Ferrari</option>
+                <option>Audi</option>
+              </select>
+                <img src="images/no-image.png" class="mt-3" id="pimg2" height="400px" width="100%" alt="">
+                <div id="pdesc2">
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison  -->
+
+
+    <!-- Footer -->
+    <footer class="mt-5">
+      <div class="row mx-0 px-0">
+        <div class="col-md-4">
+          <h1 class="footer-h1">ABC Automobile</h1>
+          <p class="footer-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, non. Recusandae natus quam delectus consectetur vero similique maiores quasi? Magnam ab itaque maxime voluptates quis odio ipsa quia quos beatae, animi quae quod</p>
+        </div>
+        <div class="col-md-4">
+          <h1 class="footer-h1">Quick Links</h1>
+          <ul class="list-unstyled">
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+            <li>
+              <a href="">Gallery</a>
+            </li>
+            <li>
+              <a href="">Product</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h1 class="footer-h1">Social Links</h1>
+          <ul class="list-unstyled">
+            <li>
+              <a href="">
+                <i class="fa-brands fa-facebook"></i> Facebook
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-brands fa-instagram"></i> Instagram
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-brands fa-whatsapp"></i> Whatsapp
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-brands fa-x-twitter"></i> Twitter
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-brands fa-youtube"></i> Youtube
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer -->
+
+</body>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+  function prod1()
+  {
+    var opt1 = document.getElementById('p1').selectedIndex;
+    if(opt1 == 1)
+    {
+      document.getElementById('pimg1').src = "images/car1.jpg";
+      document.getElementById('pdesc1').innerHTML = `
+        <h3>Product Name : BMW</h3>
+        <h3>Price : 2.5 crore</h3>
+        <h3>Decsription : </h3>
+        <p>
+          BMW dolor sit amet consectetur adipisicing elit. Esse laudantium, blanditiis fuga optio dolorum fugit itaque doloremque repellat quibusdam molestias provident illum possimus vero iusto placeat hic reprehenderit assumenda dignissimos?
+        </p>
+      `;
+    }
+    else if(opt1 == 2)
+    {
+      document.getElementById('pimg1').src = "images/car2.jpg";
+      document.getElementById('pdesc1').innerHTML = `
+        <h3>Product Name : Ferrari</h3>
+        <h3>Price : 6 crore</h3>
+        <h3>Decsription : </h3>
+        <p>
+          Ferrari dolor sit amet consectetur adipisicing elit. Esse laudantium, blanditiis fuga optio dolorum fugit itaque doloremque repellat quibusdam molestias provident illum possimus vero iusto placeat hic reprehenderit assumenda dignissimos?
+        </p>
+      `;
+    }
+    else if(opt1 == 3)
+    {
+      document.getElementById('pimg1').src = "images/car3.jpg";
+      document.getElementById('pdesc1').innerHTML = `
+        <h3>Product Name : Audi</h3>
+        <h3>Price : 4 crore</h3>
+        <h3>Decsription : </h3>
+        <p>
+          Audi sit amet consectetur adipisicing elit. Esse laudantium, blanditiis fuga optio dolorum fugit itaque doloremque repellat quibusdam molestias provident illum possimus vero iusto placeat hic reprehenderit assumenda dignissimos?
+        </p>
+      `;
+    }
+  }
+
+  function prod2()
+  {
+
+  }
+</script>
+</html>

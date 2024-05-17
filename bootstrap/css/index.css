@@ -1,0 +1,14 @@
+footer{
+    background-color: #212529;
+    padding: 50px 40px;
+}
+footer .footer-h1,.footer-p{
+    color: white;
+}
+footer ul li a{
+    color: white; 
+    text-decoration: none;
+}
+footer .col-md-4{
+    text-align: center;
+}
